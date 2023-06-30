@@ -1,0 +1,9 @@
+<table align="right">
+    <tr><td>{{ name | safe }}さんログイン中</td></tr>
+</table>
+<h1>CSVデータ送信画面</h1>
+<form method="POST" action="table" enctype="multipart/form-data">
+    <input type="hidden" value="{{ homeCSRF | safe }}" name="homeCSRF">
+    <input type="file" accept=".csv" name="file">
+    <input type="submit" value="送信">
+</form>

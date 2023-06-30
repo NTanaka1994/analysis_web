@@ -1,0 +1,10 @@
+{{ msg | safe }}
+<title>ログイン画面</title>
+<table align="center" border="0">
+    <form method="POST" action="login">
+        <tr><td>メールアドレス</td><td><input type="email" name="email"></td></tr>
+        <tr><td>パスワード</td><td><input type="password" name="password"></td></tr>
+        <tr><td colspan="2" align="right"><input type="submit" value="ログイン"></td></tr>
+        <tr><td colspan="2">ユーザ登録していない方は<a href="signup">こちらから</a></td></tr>
+    </form>
+</table>

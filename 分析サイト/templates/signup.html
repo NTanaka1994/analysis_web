@@ -1,0 +1,11 @@
+{{ msg | safe }}
+<title>ユーザー登録</title>
+<table align="center">
+    <form method="POST" action="signup">
+        <tr><td>名前</td><td><input type="text" name="name" required></td></tr>
+        <tr><td>メールアドレス</td><td><input type="email" name="email" required></td></tr>
+        <tr><td>パスワード</td><td><input type="password" name="password" required></td></tr>
+        <tr><td>パスワード(確認用)</td><td><input type="password" name="passwordtmp" required></td></tr>
+        <tr><td align="right" colspan="2"><input type="submit" value="作成"></td></tr>
+    </form>
+</table>
