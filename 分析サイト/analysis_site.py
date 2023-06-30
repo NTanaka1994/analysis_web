@@ -26,13 +26,13 @@ def route():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    if request.method=="GET":
+    if request.method == "GET":
         if request.args.get("msg") is not None:
             return render_template("login.html", 
                                    msg=html.escape(request.args.get("msg")))
         else:
             return render_template("login.html")
-    elif request.method=="POST":
+    elif request.method == "POST":
         email = request.form["email"]
         passwd = request.form["password"]
         con = sqlite3.connect("data.db")
@@ -61,13 +61,13 @@ def login():
         
 @app.route("/signup", methods=["GET", "POST"])
 def singup():
-    if request.method=="GET":
+    if request.method == "GET":
         if request.args.get("msg") is not None:
             return render_template("singup.html", 
                                    msg=html.escape(request.args.get("msg")))
         else:
             return render_template("signup.html")
-    elif request.method=="POST":
+    elif request.method == "POST":
         name = request.form["name"]
         email = request.form["email"]
         passwd = request.form["password"]
