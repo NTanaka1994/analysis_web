@@ -50,6 +50,7 @@ def login():
             name.append(row[0])
             email.append(row[1])
             hashpass.append(row[2])
+        con.close()
         if len(hashpass) == 0:
             return redirect("login?msg=メールアドレスが間違っています")
         if cph(hashpass[0], passwd):
